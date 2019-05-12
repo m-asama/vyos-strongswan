@@ -340,6 +340,9 @@ enum child_cfg_option_t {
 
 	/** Disable copying the ECN header field in tunnel mode */
 	OPT_NO_COPY_ECN = (1<<8),
+
+	/** Disable install route */
+	OPT_DONT_INSTALL_ROUTE = (1<<9),
 };
 
 /**

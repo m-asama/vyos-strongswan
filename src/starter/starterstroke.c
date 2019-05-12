@@ -232,6 +232,7 @@ int starter_stroke_add_conn(starter_config_t *cfg, starter_conn_t *conn)
 	msg->add_conn.mark_out.value = conn->mark_out.value;
 	msg->add_conn.mark_out.mask = conn->mark_out.mask;
 	msg->add_conn.tfc = conn->tfc;
+	msg->add_conn.install_route = !(conn->options & SA_OPTION_DONT_INSTALL_ROUTE);
 
 	add_end(&msg, offsetof(stroke_msg_t, add_conn.me), &conn->left);
 	add_end(&msg, offsetof(stroke_msg_t, add_conn.other), &conn->right);

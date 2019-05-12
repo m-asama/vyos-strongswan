@@ -515,6 +515,9 @@ static void handle_keyword(kw_token_t token, starter_conn_t *conn, char *key,
 		case KW_XAUTH:
 			KW_SA_OPTION_FLAG("server", "client", SA_OPTION_XAUTH_SERVER)
 			break;
+		case KW_INSTALL_ROUTE:
+			KW_SA_OPTION_FLAG("no", "yes", SA_OPTION_DONT_INSTALL_ROUTE)
+			break;
 		default:
 			break;
 	}

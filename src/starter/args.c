@@ -179,6 +179,7 @@ static const token_info_t token_info[] =
 	{ ARG_MISC, 0, NULL  /* KW_MARK_IN */                                          },
 	{ ARG_MISC, 0, NULL  /* KW_MARK_OUT */                                         },
 	{ ARG_MISC, 0, NULL  /* KW_TFC */                                              },
+	{ ARG_MISC, 0, NULL  /* KW_INSTALL_ROUTE */                                    },
 	{ ARG_MISC, 0, NULL  /* KW_PFS_DEPRECATED */                                   },
 	{ ARG_MISC, 0, NULL  /* KW_CONN_DEPRECATED */                                  },
 

@@ -174,6 +174,8 @@ struct kernel_ipsec_manage_policy_t {
 	host_t *dst;
 	/** Details about the SA(s) tied to this policy */
 	ipsec_sa_cfg_t *sa;
+	/** Require install route */
+	bool install_route;
 };
 
 /**

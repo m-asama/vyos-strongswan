@@ -1034,6 +1034,7 @@ static status_t install_policies_outbound(private_child_sa_t *this,
 		.src = my_addr,
 		.dst = other_addr,
 		.sa = other_sa,
+		.install_route = !this->config->has_option(this->config, OPT_DONT_INSTALL_ROUTE),
 	};
 	status_t status = SUCCESS;
 

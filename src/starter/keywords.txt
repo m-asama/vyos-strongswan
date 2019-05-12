@@ -84,6 +84,7 @@ ocspuri,           KW_OCSPURI
 ocspuri1,          KW_OCSPURI
 ocspuri2,          KW_OCSPURI2
 certuribase,       KW_CERTURIBASE
+install_route,     KW_INSTALL_ROUTE
 left,              KW_LEFT
 leftikeport,       KW_LEFTIKEPORT
 leftsubnet,        KW_LEFTSUBNET

@@ -2660,7 +2660,7 @@ static status_t add_policy_internal(private_kernel_pfkey_ipsec_t *this,
 	 * - the selector is not for a specific protocol/port
 	 * - we are in tunnel mode or install a bypass policy
 	 */
-	if (policy->direction == POLICY_OUT && this->install_routes &&
+	if (policy->direction == POLICY_OUT && this->install_routes && policy->install_route &&
 		policy->src.proto == IPSEC_PROTO_ANY &&
 		!policy->src.net->get_port(policy->src.net) &&
 		!policy->dst.net->get_port(policy->dst.net))
@@ -2691,6 +2691,7 @@ METHOD(kernel_ipsec_t, add_policy, status_t,
 
 	/* create a policy */
 	policy = create_policy_entry(id->src_ts, id->dst_ts, id->dir);
+	policy->install_route = data->install_route;
 
 	/* find a matching policy */
 	this->mutex->lock(this->mutex);
